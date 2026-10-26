@@ -31,3 +31,11 @@ class Proyecto:
 
     def asignar(self, usuario):
         self.responsable = usuario
+
+
+class Usuario:
+
+    def crear(self, nombre, departamento, puesto):
+        self.nombre = nombre
+        self.departamento = departamento
+        self.puesto = puesto

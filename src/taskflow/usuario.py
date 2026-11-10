@@ -1,6 +1,15 @@
-class Usuario:
+"""Clase Usuario de TaskFlow."""
 
-    def crear(self, nombre, departamento, puesto):
+
+class Usuario:
+    def __init__(self, identificador, nombre):
+        self.id_usuario = identificador
         self.nombre = nombre
-        self.departamento = departamento
-        self.puesto = puesto
+
+    def modificar_nombre(self, nuevo_nombre):
+        if not nuevo_nombre.strip():
+            raise ValueError("El nombre no puede estar vacío.")
+        self.nombre = nuevo_nombre
+
+    def __str__(self):
+        return self.nombre
